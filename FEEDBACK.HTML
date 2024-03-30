@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4e2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.pexels.com/photos/220118/pexels-photo-220118.jpeg?cs=srgb&dl=pexels-pixabay-220118.jpg&fm=jpg');
+
+  }
+  .container {
+    background-color: rgb(163, 154, 165);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    max-width: 100%;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+   
+  }
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  textarea {
+    height: 100px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #23232c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: none;
+    z-index: 999;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Feedback Form</h2>
+  <form id="feedbackForm">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
+
+<div class="popup" id="popup">
+  <p>Form submitted successfully!</p>
+</div>
+
+<script>
+  document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    console.log("Form submitted:", formData);
+    showPopup();
+    // Clear the form after submission
+    this.reset();
+  });
+
+  function showPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+    setTimeout(function() {
+      popup.style.display = "none";
+    }, 2000); // Hide popup after 2 seconds
+  }
+</script>
+
+</body>
+</html>

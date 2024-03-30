@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:800;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 25px;
+    border: 5px groove black;
+}
+
+article img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height:250px;
+    width:270px;
+
+}
+
+a,button {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color:rgb(255, 255, 255);
+    cursor: pointer;
+    
+    
+    
+  }
+
+  .main-content button {
+    background-color:rgba(0,0,0,0.2);
+    /* padding-top: 10px; */
+    margin-top: 10px;
+    
+    padding: 9px 25px;
+    border:2px solid #00ffea;
+    border-radius: 50px; 
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+    
+  }
+
+  .main-content button:hover {
+    /* background-color: #a9001ccc;
+    transition: all 0.4s ease 0s; */
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+    
+  }
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px;
+    background-color: #8d3290;
+  }
+  .header .logo {
+    font-size: 25px;
+    color:black;
+  }
+  .input input {
+    height: 35px;
+    width: 265px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: none;
+    border:2px solid black;
+  }
+  .input button  {
+    height: 35px;
+    width:65px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-style: none;
+    border:2px solid black;
+  }
+  .input button a {
+    color:black;
+  }
+  .input input:hover {
+    border: 3px inset red;
+  }
+  
+  .header .home button {
+    height: 35px;
+    width:65px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-style: none;
+    border:2px solid black;
+
+  }
+  .header .home button a {
+    color:black;
+
+  }
